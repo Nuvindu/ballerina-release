@@ -72,10 +72,15 @@ function gatherModuleDetails() returns json|error {
                 moduleName = "openapi";
             }
 
+            string? packageVersion = versionProperties[check module.version_key];
+            if packageVersion is () {
+                continue;
+            }
+
             moduleDetails.push({
                 level: (check module.level).toString(),
                 packageName: moduleName,
-                packageVersion: <string>versionProperties[check module.version_key]
+                packageVersion: <string> packageVersion
             });
         }
     }
