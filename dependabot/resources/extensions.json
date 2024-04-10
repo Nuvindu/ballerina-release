@@ -311,22 +311,6 @@
             ]
         },
         {
-            "name": "module-ballerina-soap",
-            "level": 7,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "soap-ballerina",
-            "version_key": "stdlibSoapVersion",
-            "default_branch": "master",
-            "auto_merge": true,
-            "push_to_central": true,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "ballerina-distribution"
-            ]
-        },
-        {
             "name": "module-ballerina-sql",
             "level": 7,
             "group_id": "io.ballerina.stdlib",
