@@ -3,39 +3,6 @@
     "lang_version_substring": "2201.0.2",
     "standard_library": [
         {
-            "name": "module-ballerina-observe",
-            "level": 1,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "observe-ballerina",
-            "version_key": "observeVersion",
-            "default_branch": "main",
-            "auto_merge": true,
-            "push_to_central": true,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "module-ballerinai-observe"
-            ]
-        },
-        {
-            "name": "module-ballerina-constraint",
-            "level": 2,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "constraint-ballerina",
-            "version_key": "stdlibConstraintVersion",
-            "default_branch": "main",
-            "auto_merge": true,
-            "push_to_central": true,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "module-ballerina-cache",
-                "module-ballerinax-nats"
-            ]
-        },
-        {
             "name": "module-ballerina-crypto",
             "level": 2,
             "group_id": "io.ballerina.stdlib",
@@ -57,24 +24,6 @@
             ]
         },
         {
-            "name": "module-ballerinai-observe",
-            "level": 2,
-            "group_id": "io.ballerina",
-            "artifact_id": "observe-ballerina",
-            "version_key": "observeInternalVersion",
-            "default_branch": "main",
-            "auto_merge": true,
-            "push_to_central": false,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "module-ballerinax-datamapper",
-                "module-ballerina-log",
-                "module-ballerinax-persist.inmemory"
-            ]
-        },
-        {
             "name": "module-ballerina-persist",
             "level": 2,
             "group_id": "io.ballerina.stdlib",
@@ -89,24 +38,6 @@
             "dependents": [
                 "module-ballerinax-persist.inmemory",
                 "module-ballerinax-persist.sql"
-            ]
-        },
-        {
-            "name": "module-ballerina-cache",
-            "level": 3,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "cache-ballerina",
-            "version_key": "stdlibCacheVersion",
-            "default_branch": "master",
-            "auto_merge": true,
-            "push_to_central": true,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "module-ballerina-auth",
-                "module-ballerina-jwt",
-                "module-ballerina-oauth2"
             ]
         },
         {
@@ -207,22 +138,6 @@
             "artifact_id": "tcp-ballerina",
             "version_key": "stdlibTcpVersion",
             "default_branch": "master",
-            "auto_merge": true,
-            "push_to_central": true,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "ballerina-distribution"
-            ]
-        },
-        {
-            "name": "module-ballerina-udp",
-            "level": 4,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "udp-ballerina",
-            "version_key": "stdlibUdpVersion",
-            "default_branch": "main",
             "auto_merge": true,
             "push_to_central": true,
             "is_extended_library_module": false,
