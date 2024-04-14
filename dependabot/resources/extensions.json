@@ -15,10 +15,10 @@
             "build_action_file": "build-timestamped-master",
             "send_notification": true,
             "dependents": [
-                "module-ballerina-data.xmldata",
                 "module-ballerinax-datamapper",
                 "module-ballerina-log",
                 "module-ballerina-os",
+                "module-ballerina-serdes",
                 "module-ballerina-xslt"
             ]
         },
@@ -68,6 +68,26 @@
             "send_notification": true,
             "dependents": [
                 "module-ballerinai-observe"
+            ]
+        },
+        {
+            "name": "module-ballerina-regex",
+            "level": 1,
+            "group_id": "io.ballerina.stdlib",
+            "artifact_id": "regex-ballerina",
+            "version_key": "stdlibRegexVersion",
+            "default_branch": "main",
+            "auto_merge": true,
+            "push_to_central": true,
+            "is_extended_library_module": false,
+            "build_action_file": "build-timestamped-master",
+            "send_notification": true,
+            "dependents": [
+                "module-ballerinax-choreo",
+                "module-ballerinax-jaeger",
+                "module-ballerinax-prometheus",
+                "openapi-tools",
+                "asyncapi-tools"
             ]
         },
         {
@@ -159,24 +179,9 @@
                 "module-ballerina-jwt",
                 "module-ballerinax-nats",
                 "module-ballerina-oauth2",
+                "module-ballerinax-stan",
                 "module-ballerina-tcp",
                 "module-ballerina-uuid"
-            ]
-        },
-        {
-            "name": "module-ballerina-data.xmldata",
-            "level": 2,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "data.xmldata-ballerina",
-            "version_key": "stdlibDataXmldataVersion",
-            "default_branch": "main",
-            "auto_merge": true,
-            "push_to_central": true,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "ballerina-distribution"
             ]
         },
         {
@@ -193,8 +198,7 @@
             "send_notification": true,
             "dependents": [
                 "module-ballerinax-datamapper",
-                "module-ballerina-log",
-                "module-ballerinax-persist.inmemory"
+                "module-ballerina-log"
             ]
         },
         {
@@ -226,8 +230,7 @@
             "build_action_file": "build-timestamped-master",
             "send_notification": true,
             "dependents": [
-                "module-ballerinax-persist.inmemory",
-                "module-ballerinax-persist.sql"
+                "persist-tools"
             ]
         },
         {
@@ -261,12 +264,24 @@
             "dependents": [
                 "module-ballerina-grpc",
                 "module-ballerinax-kafka",
-                "module-ballerina-mqtt",
                 "module-ballerinax-rabbitmq",
-                "module-ballerina-soap",
                 "module-ballerina-websub",
                 "module-ballerina-websubhub"
             ]
+        },
+        {
+            "name": "module-ballerina-serdes",
+            "level": 2,
+            "group_id": "io.ballerina.stdlib",
+            "artifact_id": "serdes-ballerina",
+            "version_key": "stdlibSerdesVersion",
+            "default_branch": "main",
+            "auto_merge": true,
+            "push_to_central": true,
+            "is_extended_library_module": false,
+            "build_action_file": "build-timestamped-master",
+            "send_notification": true,
+            "dependents": []
         },
         {
             "name": "module-ballerina-task",
@@ -352,30 +367,13 @@
                 "module-ballerina-auth",
                 "module-ballerina-file",
                 "module-ballerina-ftp",
-                "module-ballerinax-java.jms",
                 "module-ballerina-jwt",
                 "module-ballerina-mime",
-                "module-ballerina-mqtt",
                 "module-ballerinax-nats",
                 "module-ballerina-oauth2",
+                "module-ballerinax-stan",
                 "module-ballerina-tcp",
                 "module-ballerina-udp"
-            ]
-        },
-        {
-            "name": "module-ballerinax-persist.inmemory",
-            "level": 3,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "persist.inmemory-ballerina",
-            "version_key": "stdlibPersistInmemoryVersion",
-            "default_branch": "main",
-            "auto_merge": true,
-            "push_to_central": true,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "persist-tools"
             ]
         },
         {
@@ -395,8 +393,6 @@
                 "module-ballerinax-azure.functions",
                 "module-ballerina-grpc",
                 "module-ballerinax-jaeger",
-                "module-ballerinax-java.jms",
-                "module-ballerina-mqtt",
                 "module-ballerinax-prometheus",
                 "asyncapi-tools",
                 "module-ballerinai-transaction",
@@ -434,12 +430,8 @@
             "build_action_file": "build-timestamped-master",
             "send_notification": true,
             "dependents": [
-                "module-ballerina-data.jsondata",
-                "module-ballerina-edi",
                 "module-ballerina-email",
-                "module-ballerina-http",
-                "module-ballerina-toml",
-                "module-ballerina-yaml"
+                "module-ballerina-http"
             ]
         },
         {
@@ -492,22 +484,6 @@
             ]
         },
         {
-            "name": "module-ballerina-mqtt",
-            "level": 4,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "mqtt-ballerina",
-            "version_key": "stdlibMqttVersion",
-            "default_branch": "main",
-            "auto_merge": true,
-            "push_to_central": true,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "ballerina-distribution"
-            ]
-        },
-        {
             "name": "module-ballerina-oauth2",
             "level": 4,
             "group_id": "io.ballerina.stdlib",
@@ -545,38 +521,6 @@
             "group_id": "io.ballerina.stdlib",
             "artifact_id": "udp-ballerina",
             "version_key": "stdlibUdpVersion",
-            "default_branch": "main",
-            "auto_merge": true,
-            "push_to_central": true,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "ballerina-distribution"
-            ]
-        },
-        {
-            "name": "module-ballerina-data.jsondata",
-            "level": 5,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "data.jsondata-ballerina",
-            "version_key": "stdlibDataJsondataVersion",
-            "default_branch": "main",
-            "auto_merge": true,
-            "push_to_central": true,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "ballerina-distribution"
-            ]
-        },
-        {
-            "name": "module-ballerina-edi",
-            "level": 5,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "edi-ballerina",
-            "version_key": "stdlibEdiVersion",
             "default_branch": "main",
             "auto_merge": true,
             "push_to_central": true,
@@ -629,38 +573,6 @@
             ]
         },
         {
-            "name": "module-ballerina-toml",
-            "level": 5,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "toml-ballerina",
-            "version_key": "stdlibTomlVersion",
-            "default_branch": "main",
-            "auto_merge": true,
-            "push_to_central": true,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "ballerina-distribution"
-            ]
-        },
-        {
-            "name": "module-ballerina-yaml",
-            "level": 5,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "yaml-ballerina",
-            "version_key": "stdlibYamlVersion",
-            "default_branch": "main",
-            "auto_merge": true,
-            "push_to_central": true,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "ballerina-distribution"
-            ]
-        },
-        {
             "name": "module-ballerina-grpc",
             "level": 6,
             "group_id": "io.ballerina.stdlib",
@@ -710,7 +622,6 @@
             "dependents": [
                 "module-ballerinax-kafka",
                 "module-ballerinax-rabbitmq",
-                "module-ballerina-soap",
                 "module-ballerina-sql"
             ]
         },
@@ -783,22 +694,6 @@
             ]
         },
         {
-            "name": "module-ballerina-soap",
-            "level": 7,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "soap-ballerina",
-            "version_key": "stdlibSoapVersion",
-            "default_branch": "master",
-            "auto_merge": true,
-            "push_to_central": true,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "ballerina-distribution"
-            ]
-        },
-        {
             "name": "module-ballerina-sql",
             "level": 7,
             "group_id": "io.ballerina.stdlib",
@@ -835,22 +730,6 @@
             ]
         },
         {
-            "name": "module-ballerinax-mssql",
-            "level": 8,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "mssql-ballerina",
-            "version_key": "stdlibMssqlVersion",
-            "default_branch": "main",
-            "auto_merge": true,
-            "push_to_central": false,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "module-ballerinax-persist.sql"
-            ]
-        },
-        {
             "name": "module-ballerinax-mysql",
             "level": 8,
             "group_id": "io.ballerina.stdlib",
@@ -863,23 +742,7 @@
             "build_action_file": "build-timestamped-master",
             "send_notification": true,
             "dependents": [
-                "module-ballerinax-persist.sql"
-            ]
-        },
-        {
-            "name": "module-ballerinax-postgresql",
-            "level": 8,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "postgresql-ballerina",
-            "version_key": "stdlibPostgresqlVersion",
-            "default_branch": "main",
-            "auto_merge": true,
-            "push_to_central": false,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "module-ballerinax-persist.sql"
+                "persist-tools"
             ]
         },
         {
@@ -915,24 +778,8 @@
             ]
         },
         {
-            "name": "module-ballerinax-persist.sql",
-            "level": 9,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "persist.sql-ballerina",
-            "version_key": "stdlibPersistSqlVersion",
-            "default_branch": "main",
-            "auto_merge": true,
-            "push_to_central": true,
-            "is_extended_library_module": false,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": [
-                "persist-tools"
-            ]
-        },
-        {
             "name": "persist-tools",
-            "level": 10,
+            "level": 9,
             "group_id": "io.ballerina",
             "artifact_id": "persist-tools",
             "version_key": "persistToolVersion",
@@ -948,7 +795,7 @@
         },
         {
             "name": "ballerina-dev-tools",
-            "level": 11,
+            "level": 10,
             "group_id": "org.ballerinalang",
             "artifact_id": "ballerina-dev-tools",
             "version_key": "devToolsVersion",
@@ -964,7 +811,7 @@
         },
         {
             "name": "ballerina-distribution",
-            "level": 12,
+            "level": 11,
             "group_id": "io.ballerina.stdlib",
             "artifact_id": "distribution-ballerina",
             "version_key": "stdlibDistributionVersion",
@@ -980,7 +827,7 @@
     "extended_library": [
         {
             "name": "module-ballerinax-aws.lambda",
-            "level": 13,
+            "level": 12,
             "group_id": "org.ballerinax.awslambda",
             "artifact_id": "awslambda-extension-bala",
             "version_key": "awslambdaVersion",
@@ -994,7 +841,7 @@
         },
         {
             "name": "module-ballerinax-azure.functions",
-            "level": 13,
+            "level": 12,
             "group_id": "org.ballerinax.azurefunctions",
             "artifact_id": "azurefunctions-extension",
             "version_key": "azFunctionsVersion",
@@ -1008,7 +855,7 @@
         },
         {
             "name": "module-ballerinax-choreo",
-            "level": 13,
+            "level": 12,
             "group_id": "org.ballerinalang",
             "artifact_id": "choreo-extension-ballerina",
             "version_key": "observeExtChoreoVersion",
@@ -1022,7 +869,7 @@
         },
         {
             "name": "module-ballerina-docker",
-            "level": 13,
+            "level": 12,
             "group_id": "org.ballerinax.docker",
             "artifact_id": "docker-generator",
             "version_key": "dockerVersion",
@@ -1036,7 +883,7 @@
         },
         {
             "name": "module-ballerinax-jaeger",
-            "level": 13,
+            "level": 12,
             "group_id": "org.ballerinalang",
             "artifact_id": "jaeger-extension-ballerina",
             "version_key": "observeExtJaegerVersion",
@@ -1050,7 +897,7 @@
         },
         {
             "name": "module-ballerinax-java.jdbc",
-            "level": 13,
+            "level": 12,
             "group_id": "io.ballerina.stdlib",
             "artifact_id": "java.jdbc-ballerina",
             "version_key": "stdlibJdbcVersion",
@@ -1063,22 +910,8 @@
             "dependents": []
         },
         {
-            "name": "module-ballerinax-java.jms",
-            "level": 13,
-            "group_id": "io.ballerina.stdlib",
-            "artifact_id": "java.jms-ballerina",
-            "version_key": "stdlibJmsVersion",
-            "default_branch": "master",
-            "auto_merge": true,
-            "push_to_central": false,
-            "is_extended_library_module": true,
-            "build_action_file": "build-timestamped-master",
-            "send_notification": true,
-            "dependents": []
-        },
-        {
             "name": "module-ballerinax-kafka",
-            "level": 13,
+            "level": 12,
             "group_id": "io.ballerina.stdlib",
             "artifact_id": "kafka-ballerina",
             "version_key": "stdlibKafkaVersion",
@@ -1091,8 +924,22 @@
             "dependents": []
         },
         {
+            "name": "module-ballerinax-mssql",
+            "level": 12,
+            "group_id": "io.ballerina.stdlib",
+            "artifact_id": "mssql-ballerina",
+            "version_key": "stdlibMssqlVersion",
+            "default_branch": "main",
+            "auto_merge": true,
+            "push_to_central": false,
+            "is_extended_library_module": true,
+            "build_action_file": "build-timestamped-master",
+            "send_notification": true,
+            "dependents": []
+        },
+        {
             "name": "module-ballerinax-nats",
-            "level": 13,
+            "level": 12,
             "group_id": "io.ballerina.stdlib",
             "artifact_id": "nats-ballerina",
             "version_key": "stdlibNatsVersion",
@@ -1106,7 +953,7 @@
         },
         {
             "name": "module-ballerinax-oracledb",
-            "level": 13,
+            "level": 12,
             "group_id": "io.ballerina.stdlib",
             "artifact_id": "oracledb-ballerina",
             "version_key": "stdlibOracledbVersion",
@@ -1119,8 +966,22 @@
             "dependents": []
         },
         {
+            "name": "module-ballerinax-postgresql",
+            "level": 12,
+            "group_id": "io.ballerina.stdlib",
+            "artifact_id": "postgresql-ballerina",
+            "version_key": "stdlibPostgresqlVersion",
+            "default_branch": "main",
+            "auto_merge": true,
+            "push_to_central": false,
+            "is_extended_library_module": true,
+            "build_action_file": "build-timestamped-master",
+            "send_notification": true,
+            "dependents": []
+        },
+        {
             "name": "module-ballerinax-prometheus",
-            "level": 13,
+            "level": 12,
             "group_id": "org.ballerinalang",
             "artifact_id": "prometheus-extension-ballerina",
             "version_key": "observeExtPrometheusVersion",
@@ -1134,11 +995,25 @@
         },
         {
             "name": "module-ballerinax-rabbitmq",
-            "level": 13,
+            "level": 12,
             "group_id": "io.ballerina.stdlib",
             "artifact_id": "rabbitmq-ballerina",
             "version_key": "stdlibRabbitmqVersion",
             "default_branch": "master",
+            "auto_merge": true,
+            "push_to_central": false,
+            "is_extended_library_module": true,
+            "build_action_file": "build-timestamped-master",
+            "send_notification": true,
+            "dependents": []
+        },
+        {
+            "name": "module-ballerinax-stan",
+            "level": 12,
+            "group_id": "io.ballerina.stdlib",
+            "artifact_id": "stan-ballerina",
+            "version_key": "stdlibStanVersion",
+            "default_branch": "main",
             "auto_merge": true,
             "push_to_central": false,
             "is_extended_library_module": true,
